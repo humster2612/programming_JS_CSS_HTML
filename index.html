@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+
+<html lang="pl"
+<head>
+  <title>Strona</title>
+  <link rel="stylesheet" href="css/style.css"/>
+
+  <meta http-equiv="Content-type" content="text/html;charset=UTF-8"/>
+
+
+</head>
+
+<body>
+    
+    <h1>Formularz rejestracyjny</h1>
+    <form id="registration-form">
+      <div>
+        <label for="first-name">Imię:</label>
+        <input type="text" id="first-name" name="first-name" required>
+      </div>
+      <div>
+        <label for="last-name">Nazwisko:</label>
+        <input type="text" id="last-name" name="last-name" required>
+      </div>
+      <div>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div>
+        <label for="password">Hasło:</label>
+        <input type="password" id="password" name="password" required>
+      </div>
+      <div>
+        <label for="gender">Płeć:</label>
+        <select id="gender" name="gender">
+          <option value="male">Mężczyzna</option>
+          <option value="female">Kobieta</option>
+          <option value="other">Inna</option>
+        </select>
+      </div>
+      <div>
+        <label for="phone">Telefon:</label>
+        <input type="text" id="phone" name="phone" pattern="\d*" maxlength="9">
+    </label>
+      </div>
+      <div>
+        <label for="birthdate">Data urodzenia:</label>
+        <input type="date" id="birthdate" name="birthdate" required>
+      </div>
+      <div>
+        <label for="country">Kraj:</label>
+        <input type="text" id="country" name="country" required>
+      </div>
+     
+      <label>
+        Hasło:
+        <input type="password" id="password" name="password" required>
+      </label>
+      <br>
+      <label>
+        Powtórz hasło:
+        <input type="password" id="confirmPassword" name="confirmPassword" required>
+      </label>
+      <br>
+      <label>
+        Kraj:
+        <select id="country" name="country" onchange="showProvinceInput()">
+          <option value="">Wybierz kraj</option>
+          <option value="Polska">Polska</option>
+          <option value="Niemcy">Niemcy</option>
+          <option value="Francja">Francja</option>
+        </select>
+      </label>
+      <br>
+      <div id="provinceInput">
+        <label>
+          Województwo:
+          <input type="text" id="province" name="province">
+        </label>
+        <br>
+      </div>
+      <label>
+        Adres zamieszkania:
+        <input type="text" id="residentialAddress" name="residentialAddress" disabled>
+      </label>
+      <br>
+      <label>
+        <input type="checkbox" id="sameAddress" name="sameAddress" checked onchange="showHideCorrespondenceAddress()">
+        Adres korespondencyjny jest taki sam jak adres zamieszkania
+      </label>
+      <br>
+      <div id="correspondenceAddress" style="display: none;">
+        <label>
+          Adres korespondencyjny:
+          <input type="text" id="address" name="address" disabled>
+        </label>
+        <br>
+      </div>
+      <button type="submit">Zarejestruj</button>
+
+
+
+    <script src="js/style.js"></script>
+
+</body>
+
+
+</html>
